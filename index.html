@@ -1,98 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video games are good</title>
-<style>
-body {
-margin: 0;
-background-color: black;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-header {
-width: 100%;
-background-color: black;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px 0;
-gap: 20px;
-}
-header img {
-height: 60px;
-}
-.container {
-  display: flex;
-  align-items: flex-start; /* keeps thumbnails aligned with video */
-  justify-content: center; /* keeps them centered on the page */
-  gap: 20px;
-  margin-top: 40px;
-}
-.thumbnails {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.thumbnails img {
-width: 80px;
-height: 80px;
-object-fit: cover;
-border: 2px solid #fff;
-border-radius: 6px;
-cursor: pointer;
-}
-video {
-max-width: 90%;
-max-height: 90%;
-border: 2px solid #fff;
-border-radius: 8px;
-}
-.game-title a {
-  margin-top: 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: gold;
-  text-shadow: 2px 2px 6px black;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video games are good</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-<img src="under1.gif" alt="Left GIF">
   <img src="under1.gif" alt="Left GIF">
   <img src="under1.gif" alt="Left GIF">
   <img src="under1.gif" alt="Left GIF">
-<img src="under.gif" alt="Banner">
-<img src="under1.gif" alt="Right GIF">
+  <img src="under1.gif" alt="Left GIF">
+  <img src="under.gif" alt="Banner">
+  <img src="under1.gif" alt="Right GIF">
   <img src="under1.gif" alt="Right GIF">
   <img src="under1.gif" alt="Right GIF">
   <img src="under1.gif" alt="Right GIF">
 </header>
+
 <div class="container">
-<div class="thumbnails">
-<a href="ts.html"><img src="Tormentsouls.jpg" alt="Thumbnail 1"></a>
-<a href="tomba.html"><img src="Tomba.png" alt="Thumbnail 2"></a>
-<a href="killer.html"><img src="killer.jpg" alt="Thumbnail 3"></a>
-<a href="key.html"><img src="key.jpg" alt="Thumbnail 4"></a>
+  <div class="thumbnails">
+    <a href="ts.html"><img src="Tormentsouls.jpg" alt="Thumbnail 1"></a>
+    <a href="tomba.html"><img src="Tomba.png" alt="Thumbnail 2"></a>
+    <a href="killer.html"><img src="killer.jpg" alt="Thumbnail 3"></a>
+    <a href="key.html"><img src="key.jpg" alt="Thumbnail 4"></a>
+  </div>
+
+  <video controls>
+    <source src="mrbeast.mp4" type="video/mp4">
+  </video>
 </div>
-<video controls>
-<source src="mrbeast.mp4" type="video/mp4">
-</video>
-</div>
-  <div class="game-title">
+
+<div class="game-title">
   <a href="https://store.steampowered.com/app/1763030/Master_Key/" target="_blank">
     Game of the Month is Master Key
   </a>
 </div>
 </body>
 </html>
-
-
-
 
 
 
