@@ -68,8 +68,10 @@ video {
 }
 
 .side-gif img {
-  height: 60px;   
+  height: 50px;       
   width: auto;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -113,6 +115,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
