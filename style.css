@@ -62,11 +62,11 @@ video {
 }
 
 .side-gif img {
-  height: 50px;    
+  height: 50px;
   width: auto;
   margin: 0;
   padding: 0;
-  display: block;  
+  display: block; 
 }
 
 .game-title a,
@@ -120,6 +120,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
