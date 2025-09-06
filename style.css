@@ -61,17 +61,6 @@ video {
   text-align: center;
 }
 
-.game-title {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap: 6px;
-  margin-top: 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-
 .side-gif img {
   height: 50px;    
   width: auto;
@@ -131,6 +120,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
