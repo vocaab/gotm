@@ -51,10 +51,10 @@ video {
 }
 
 .game-title {
-  display: flex;              /* NEW: puts gifs + text in a row */
-  align-items: center;        /* NEW: vertically align gifs with text */
-  justify-content: center;    /* NEW: center the whole group */
-  gap: 15px;                  /* NEW: spacing between gifs and text */
+  display: flex;              
+  align-items: center;        
+  justify-content: center;   
+  gap: 15px;                  
   margin-top: 20px;
   font-size: 2.5rem;
   font-weight: bold;
@@ -68,11 +68,10 @@ video {
 }
 
 .side-gif img {
-  height: 60px;   /* same size as your banner gifs */
+  height: 60px;   
   width: auto;
 }
 
-/* Tablet */
 @media (max-width: 768px) {
   header img { height: 40px; }
   .container { gap: 10px; }
@@ -81,7 +80,6 @@ video {
   .game-title { font-size: 1.8rem; }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   header { flex-wrap: wrap; gap: 10px; }
   header img { height: 30px; }
@@ -115,6 +113,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
