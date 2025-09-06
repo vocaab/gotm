@@ -78,6 +78,15 @@ video {
   margin: 0;
   padding: 0;
 }
+.game-title a,
+.game-title a:visited,
+.game-title a:hover,
+.game-title a:active,
+.game-title a:focus {
+  color: gold;
+  text-decoration: none;
+  text-shadow: 2px 2px 6px black;
+}
 
 @media (max-width: 768px) {
   header img { height: 40px; }
@@ -120,6 +129,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
