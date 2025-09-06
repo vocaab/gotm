@@ -62,6 +62,21 @@ video {
   text-decoration: none;
   text-shadow: 2px 2px 6px black;
 }
+.game-title1 {
+  display: flex;              /* put text + gifs in a row */
+  align-items: center;        /* vertically centered */
+  justify-content: center;    /* centered as a group */
+  gap: 15px;                  /* spacing between gifs and text */
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.side-gif img {
+  height: 60px;   /* same size as your banner gifs */
+  width: auto;
+}
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -106,5 +121,6 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
