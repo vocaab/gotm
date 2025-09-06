@@ -105,3 +105,18 @@ video {
   line-height: 1.6;
   font-size: 1.2rem;
 }
+.pentagram img {
+  margin-top: 15px;
+  width: 100px;   /* adjust size */
+  height: 100px;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
