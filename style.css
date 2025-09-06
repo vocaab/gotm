@@ -73,11 +73,13 @@ video {
 }
 
 .side-gif img {
-  height: 50px;
+  height: 50px;    
   width: auto;
   margin: 0;
   padding: 0;
+  display: block;  
 }
+
 .game-title a,
 .game-title a:visited,
 .game-title a:hover,
@@ -129,6 +131,7 @@ video {
   font-size: 1.2rem;
 }
 }
+
 
 
 
