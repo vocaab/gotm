@@ -105,17 +105,6 @@ video {
   line-height: 1.6;
   font-size: 1.2rem;
 }
-.pentagram img {
-  margin-top: 15px;
-  width: 100px;
-  height: 100px;
-  animation: rock 2s ease-in-out infinite;
 }
 
-@keyframes rock {
-  0%   { transform: rotate(-15deg); }
-  50%  { transform: rotate(15deg); }
-  100% { transform: rotate(-15deg); }
-}
-}
 
