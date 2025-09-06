@@ -107,16 +107,15 @@ video {
 }
 .pentagram img {
   margin-top: 15px;
-  width: 100px;   /* adjust size */
+  width: 100px;
   height: 100px;
-  animation: spin 6s linear infinite;
+  animation: rock 2s ease-in-out infinite;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes rock {
+  0%   { transform: rotate(-15deg); }
+  50%  { transform: rotate(15deg); }
+  100% { transform: rotate(-15deg); }
 }
+}
+
