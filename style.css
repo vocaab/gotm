@@ -31,28 +31,46 @@ header img {
   background-position: 0 -1px;
 }
 
-/* Video wrapper keeps video centered and allows thumbnails on sides */
-.video-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center; /* keeps video centered */
-  margin: 60px 0;
-}
-
-/* Video player */
-video {
-  max-width: 60%;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  display: block;
-}
-
-/* Thumbnails stacked vertically */
-.thumbnails {
-  position: absolute;
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Thumbnails in horizontal rows */
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  max-width: 600px; /* controls row width */
+  width: 100%;
+}
+
+/* Make thumbnails default centered */
+.thumbnails a {
+  display: flex;
+}
+
+/* Odd rows (first 5, 15, 25...) align left */
+.thumbnails a:nth-child(5n+1),
+.thumbnails a:nth-child(5n+2),
+.thumbnails a:nth-child(5n+3),
+.thumbnails a:nth-child(5n+4),
+.thumbnails a:nth-child(5n+5) {
+  justify-content: flex-start;
+  width: calc(20% - 10px);
+}
+
+/* Even rows (6–10, 16–20...) align right */
+.thumbnails a:nth-child(10n+1),
+.thumbnails a:nth-child(10n+2),
+.thumbnails a:nth-child(10n+3),
+.thumbnails a:nth-child(10n+4),
+.thumbnails a:nth-child(10n+5) {
+  justify-content: flex-end;
+  width: calc(20% - 10px);
 }
 
 .thumbnails img {
@@ -62,22 +80,15 @@ video {
   border: 2px solid #fff;
   border-radius: 6px;
   cursor: pointer;
-  display: block;
 }
 
-/* Left thumbnails */
-.thumbnails.left {
-  left: -100px; /* distance from video, adjust as needed */
-  top: 0;
+video {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
-/* Right thumbnails */
-.thumbnails.right {
-  right: -100px; /* distance from video, adjust as needed */
-  top: 0;
-}
-
-/* Game title */
 .game-title {
   display: flex;
   justify-content: center;
@@ -89,7 +100,6 @@ video {
   text-align: center;
 }
 
-/* Side GIFs */
 .side-gif img {
   height: 50px;
   width: auto;
@@ -98,7 +108,6 @@ video {
   display: block; 
 }
 
-/* Game title links */
 .game-title a,
 .game-title a:visited,
 .game-title a:hover,
@@ -109,22 +118,21 @@ video {
   text-shadow: 2px 2px 6px black;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   header img { height: 40px; }
-  video { max-width: 80%; }
-  .thumbnails.left { left: -80px; }
-  .thumbnails.right { right: -80px; }
+  .container { gap: 10px; }
   .thumbnails img { width: 60px; height: 60px; }
+  video { max-width: 80%; }
+  .game-title { font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
   header { flex-wrap: wrap; gap: 10px; }
   header img { height: 30px; }
-  video { max-width: 75%; }
-  .thumbnails.left { left: -60px; }
-  .thumbnails.right { right: -60px; }
+  .container { gap: 8px; }
   .thumbnails img { width: 50px; height: 50px; }
+  video { max-width: 75%; }
+  .game-title { font-size: 1.5rem; }
 }
 
 /* Review page layout */
@@ -150,12 +158,6 @@ video {
   line-height: 1.6;
   font-size: 1.2rem;
 }
-
-
-
-
-
-
 
 
 
