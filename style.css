@@ -44,33 +44,33 @@ header img {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 600px; /* controls row width */
+  max-width: 600px; /* controls total width */
   width: 100%;
 }
 
-/* Make thumbnails default centered */
+/* Each thumbnail link */
 .thumbnails a {
+  flex: 0 0 calc(20% - 10px); /* 5 per row */
   display: flex;
+  justify-content: center;
 }
 
-/* Odd rows (first 5, 15, 25...) align left */
-.thumbnails a:nth-child(5n+1),
-.thumbnails a:nth-child(5n+2),
-.thumbnails a:nth-child(5n+3),
-.thumbnails a:nth-child(5n+4),
-.thumbnails a:nth-child(5n+5) {
+/* Odd rows (1–5, 11–15, 21–25...) aligned left */
+.thumbnails a:nth-child(n+1):nth-child(-n+5),
+.thumbnails a:nth-child(n+11):nth-child(-n+15),
+.thumbnails a:nth-child(n+21):nth-child(-n+25),
+.thumbnails a:nth-child(n+31):nth-child(-n+35),
+.thumbnails a:nth-child(n+41):nth-child(-n+45) {
   justify-content: flex-start;
-  width: calc(20% - 10px);
 }
 
-/* Even rows (6–10, 16–20...) align right */
-.thumbnails a:nth-child(10n+1),
-.thumbnails a:nth-child(10n+2),
-.thumbnails a:nth-child(10n+3),
-.thumbnails a:nth-child(10n+4),
-.thumbnails a:nth-child(10n+5) {
+/* Even rows (6–10, 16–20, 26–30...) aligned right */
+.thumbnails a:nth-child(n+6):nth-child(-n+10),
+.thumbnails a:nth-child(n+16):nth-child(-n+20),
+.thumbnails a:nth-child(n+26):nth-child(-n+30),
+.thumbnails a:nth-child(n+36):nth-child(-n+40),
+.thumbnails a:nth-child(n+46):nth-child(-n+50) {
   justify-content: flex-end;
-  width: calc(20% - 10px);
 }
 
 .thumbnails img {
@@ -158,6 +158,3 @@ video {
   line-height: 1.6;
   font-size: 1.2rem;
 }
-
-
-
