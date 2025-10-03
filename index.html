@@ -8,7 +8,8 @@
 </head>
 <body>
   <div class="top-blood"></div>
-<header>
+
+  <header>
     <img src="jackline2.gif" alt="Left GIF">
     <img src="jackline2.gif" alt="Left GIF">
     <img src="jackline2.gif" alt="Left GIF">
@@ -18,31 +19,73 @@
     <img src="jackline2.gif" alt="Right GIF">
     <img src="jackline2.gif" alt="Right GIF">
     <img src="jackline2.gif" alt="Right GIF">
-</header>
+  </header>
 
-<div class="container">
-  <div class="thumbnails">
-    <a href="ts.html"><img src="Tormentsouls.jpg" alt="Thumbnail 1"></a>
-    <a href="tomba.html"><img src="Tomba.png" alt="Thumbnail 2"></a>
-    <a href="killer.html"><img src="killer.jpg" alt="Thumbnail 3"></a>
-    <a href="key.html"><img src="key.jpg" alt="Thumbnail 4"></a>
-    <a href="wt.html"><img src="wt.jpg" alt="Thumbnail 5"></a>
+  <div class="container">
+    <!-- Left side outward stacks -->
+    <div class="side side-left"></div>
+
+    <!-- Video -->
+    <video controls>
+      <source src="【公式】アニメ『ゲゲゲの鬼太郎（第3期）』OP映像：吉幾三「ゲゲゲの鬼.mp4" type="video/mp4">
+    </video>
+
+    <!-- Right side outward stacks -->
+    <div class="side side-right"></div>
   </div>
 
-  <video controls>
-    <source src="【公式】アニメ『ゲゲゲの鬼太郎（第3期）』OP映像：吉幾三「ゲゲゲの鬼.mp4" type="video/mp4">
-  </video>
-</div>
+  <div class="game-title">
+    <span class="side-gif"><img src="spinning_pumpkin_3d.gif" alt="Spinning pumpkin"></span>
+    <a href="https://dl5c.retrogametalk.com/download.php?file=Wonder%20Trek%20%28English%20v1.0%29.7z&id=264652&platform=psx-iso&key=23213756337" target="_blank">
+      Game of the Month is Wonder Trek
+    </a>
+    <span class="side-gif"><img src="spinning_pumpkin_3d.gif" alt="Spinning pumpkin"></span>
+  </div>
 
-<div class="game-title">
-  <span class="side-gif"><img src="spinning_pumpkin_3d.gif" alt="Spinning pumpkin"></span>
-  <a href="https://dl5c.retrogametalk.com/download.php?file=Wonder%20Trek%20%28English%20v1.0%29.7z&id=264652&platform=psx-iso&key=23213756337" target="_blank">
-    Game of the Month is Wonder Trek
-  </a>
-  <span class="side-gif"><img src="spinning_pumpkin_3d.gif" alt="Spinning pumpkin"></span>
-</div>
+  <!-- Master thumbnail list (hidden) -->
+  <div id="all-thumbnails" style="display:none;">
+    <img src="Tormentsouls.jpg" alt="Thumbnail 1">
+    <img src="Tomba.png" alt="Thumbnail 2">
+    <img src="killer.jpg" alt="Thumbnail 3">
+    <img src="key.jpg" alt="Thumbnail 4">
+    <img src="wt.jpg" alt="Thumbnail 5">
+    <img src="wt.jpg" alt="Thumbnail 6">
+    <img src="wt.jpg" alt="Thumbnail 7">
+    <img src="wt.jpg" alt="Thumbnail 8">
+    <img src="wt.jpg" alt="Thumbnail 9">
+    <img src="wt.jpg" alt="Thumbnail 10">
+    <img src="wt.jpg" alt="Thumbnail 11">
+    <img src="wt.jpg" alt="Thumbnail 12">
+    <!-- keep adding as many as you want -->
+  </div>
+
+  <!-- JS to distribute thumbnails outward -->
+  <script>
+    const allThumbs = document.querySelectorAll("#all-thumbnails img");
+    const sideLeft = document.querySelector(".side-left");
+    const sideRight = document.querySelector(".side-right");
+
+    allThumbs.forEach((thumb, i) => {
+      const block = Math.floor(i / 5); // group of 5
+      if (i % 5 === 0) {
+        const col = document.createElement("div");
+        col.classList.add("thumbnail-column");
+
+        for (let j = i; j < i + 5 && j < allThumbs.length; j++) {
+          col.appendChild(allThumbs[j].cloneNode(true));
+        }
+
+        if (block % 2 === 0) {
+          sideLeft.appendChild(col);
+        } else {
+          sideRight.appendChild(col);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
