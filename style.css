@@ -1,123 +1,97 @@
+/* === General Reset === */
 body {
   margin: 0;
-  background: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* Header */
+/* === Header === */
 header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  gap: 20px;
+  gap: 5px;
+  margin: 10px 0;
 }
 
 header img {
-  height: 60px;
+  height: 50px;
 }
 
-.top-blood {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9;
-  background: url(bloodbar_e0.gif);
-  height: 23px;
-  background-position: 0 -1px;
-}
-
-/* Main container with video + outward thumbnails */
+/* === Container for video and thumbnails === */
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin-top: 60px;
+  align-items: center;
+  margin-top: 20px;
 }
 
-/* Each side can hold multiple outward columns */
-.side {
+/* Video centered */
+.container video {
+  width: 640px;
+  max-width: 90%;
+  height: auto;
+  z-index: 2;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* === Thumbnails === */
+.thumbnails {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
-  gap: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
+/* Columns alternate outward */
 .thumbnail-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
 }
 
+/* Place columns outward from center */
+.thumbnail-column.left {
+  margin-right: auto;
+}
+.thumbnail-column.right {
+  margin-left: auto;
+}
+
+/* Thumbnail images (smaller size) */
 .thumbnail-column img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border: 2px solid #fff;
   border-radius: 6px;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* Video in the center */
-video {
-  max-width: 700px;
-  max-height: 500px;
-  border: 2px solid #fff;
-  border-radius: 8px;
+.thumbnail-column img:hover {
+  transform: scale(1.1);
 }
 
-/* Game title */
+/* === Game of the Month title === */
 .game-title {
+  margin-top: 30px;
+  font-size: 1.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 6px;
-  margin-top: 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .side-gif img {
-  height: 50px;
-  width: auto;
-  display: block;
+  height: 40px;
 }
-
-.game-title a,
-.game-title a:visited,
-.game-title a:hover,
-.game-title a:active,
-.game-title a:focus {
-  color: gold;
-  text-decoration: none;
-  text-shadow: 2px 2px 6px black;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header img { height: 40px; }
-  .container { gap: 20px; }
-  .thumbnail-column img { width: 60px; height: 60px; }
-  video { max-width: 80%; }
-  .game-title { font-size: 1.8rem; }
-}
-
-@media (max-width: 480px) {
-  header { flex-wrap: wrap; gap: 10px; }
-  header img { height: 30px; }
-  .container { flex-direction: column; align-items: center; }
-  .side { flex-direction: row; flex-wrap: wrap; }
-  .thumbnail-column img { width: 50px; height: 50px; }
-  video { max-width: 75%; }
-  .game-title { font-size: 1.5rem; }
-}
-
-
-
-
-
